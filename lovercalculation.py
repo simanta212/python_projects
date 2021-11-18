@@ -20,7 +20,7 @@ e=lowered_char.count("e")
 love = l + o + v + e
 
 couple_score = str(true)+ str(love)
-print(couple_score)
+print(f"love score {couple_score}")
 
 if int(couple_score) < 10:
     print("You guys are like north pole and south pole")
