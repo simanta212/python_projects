@@ -9,7 +9,6 @@ nr_letters = int(input("How many 'letters' you want?\n"))
 nr_symbols = int(input("How many 'special-characters' you want?\n"))
 nr_numbers = int(input("How many 'numbers' you want?\n"))
 
-#Eazy Level
 # password = ""
 
 # for char in range(1, nr_letters + 1):
