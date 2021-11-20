@@ -4,21 +4,42 @@ letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-print("Create yur own password")
+print("Create your own password")
 nr_letters = int(input("How many 'letters' you want?\n")) 
 nr_symbols = int(input("How many 'special-characters' you want?\n"))
 nr_numbers = int(input("How many 'numbers' you want?\n"))
 
-password = ""
+#Eazy Level
+# password = ""
 
-for char in range(1, nr_letters +1):
-    password += random.choice(letters) 
-    
-    
-for char in range(1, nr_symbols+1):
-    password += random.choice(symbols)
+# for char in range(1, nr_letters + 1):
+#   password += random.choice(letters)
 
-for char in range(1, nr_numbers+1):
-    password += random.choice(numbers)
+# for char in range(1, nr_symbols + 1):
+#   password += random.choice(symbols)
 
-print(f"your password is:  {password}")
+# for char in range(1, nr_numbers + 1):
+#   password += random.choice(numbers)
+
+# print(password)
+
+password_list = []
+
+for char in range(1, nr_letters + 1):
+  password_list.append(random.choice(letters))
+
+for char in range(1, nr_symbols + 1):
+  password_list += random.choice(symbols)
+
+for char in range(1, nr_numbers + 1):
+  password_list += random.choice(numbers)
+
+#print(password_list)
+random.shuffle(password_list)
+#print(password_list)
+
+password = "" 
+for char in password_list:
+  password += char
+
+print(f"Your password is: {password}")
