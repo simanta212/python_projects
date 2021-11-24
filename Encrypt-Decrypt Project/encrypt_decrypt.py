@@ -25,11 +25,16 @@ def encrypt(plain_text):
 def decrypt(message):
 
   plain_text = ""
+  end_num = ""
   for letter in message:
-    position = alphabet.index(letter)
-    new_position = position - 3
-    plain_text += alphabet[new_position]
-  print(f"The decoded text is {plain_text}")
+    if letter in alphabet:
+      position = alphabet.index(letter)
+      new_position = position - 3
+      end_num += alphabet[new_position]
+    else:
+      end_num += letter
+      
+  print(f"The decoded text is {plain_text}{end_num}")
 
 #Called function to either encode or decode
 if direction == "encode":
