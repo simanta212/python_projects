@@ -10,17 +10,17 @@ number_picker = random.choice(NUM_LIST)
 #hard = 5
 
 game_type = input("Type 'easy' for easy and 'hard' for hard mode\n").lower()
+#life = 0   
+
 
 def play_game():
-    life = 0   
     if game_type == "easy":
         life = 10
-    else: 
-        life = 5 
-
+    if  game_type == "hard":
+        life = 5
     User_guess = int(input("Guess the number\n"))
     life -= 1
-
+    print(f"Your have {life} try left")
     #if number_picker < 10 and User_guess > 10:
     if number_picker > User_guess:
         print("Too low") 
@@ -32,6 +32,7 @@ def play_game():
     if User_guess == number_picker:
         print("You guess the correct number") 
     
-
 while game_type != 0:    
     play_game()
+
+play_game()
