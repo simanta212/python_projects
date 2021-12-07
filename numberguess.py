@@ -1,7 +1,7 @@
 from math import gamma
 import random
 
-NUM_LIST = list(range(1,100))
+NUM_LIST = list(range(1,20))
 
 number_picker = random.choice(NUM_LIST)
 
@@ -18,10 +18,19 @@ if GAME_TYPE == "hard":
 
 
 def play_game():
-    User_guess = int(input("Guess the number\n"))
+    Tries_left = 0
     
+    User_guess = int(input("Guess the number\n"))
+
+    if number_picker < 10 and User_guess > 10:
+        print("Too high") 
+
+    elif number_picker > 10 and number_picker < 20 and User_guess > 10 and User_guess < 20:
+        print("Too low")
+
     if User_guess == number_picker:
         print("You guess the correct number") 
+    
 
 while life != 0:    
     play_game()
