@@ -1,4 +1,4 @@
-from math import gamma
+
 import random
 
 NUM_LIST = list(range(1,50))
@@ -37,4 +37,5 @@ while not game_finished :
     if life == 0:
         game_finished = True
         print("retry")
+        exit()
 
